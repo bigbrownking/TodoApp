@@ -16,7 +16,7 @@ public class User {
     private String userName;
     @Column(name = "password")
     private String password;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 
     private List<Todo> todoList = new ArrayList<>();
 
